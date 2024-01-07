@@ -14,14 +14,6 @@ function generateRandomHexString(length: number): string {
   return result;
 }
 
-// async function getCurrentlyPlaying(authOptions: object) {
-//   const res = await fetch("https://api.spotify.com/v1/me/player/currently-playing", {
-//     headers: {
-//       Authorization: `Bearer ${authOptions.}`,
-//     }
-//   })
-// }
-
 const app = new Hono();
 
 app.get("/", async (c) => {
@@ -46,26 +38,6 @@ app.get("/login", (c) => {
 
 app.get("/callback", async (c) => {
   const { code } = c.req.query();
-
-  // const authOptions = {
-  //   url: "https://accounts.spotify.com/api/token",
-  //   form: {
-  //     code: code,
-  //     redirect_uri: "http://localhost:3000/callback",
-  //     grant_type: "authorization_code",
-  //   },
-  //   headers: {
-  //     "content-type": "application/x-www-form-urlencoded",
-  //     Authorization:
-  //       "Basic " +
-  //       new Buffer.from(
-  //         process.env.spotify_client_id +
-  //           ":" +
-  //           process.env.spotify_client_secret
-  //       ).toString("base64"),
-  //   },
-  //   json: true,
-  // };
 
   const formData = new URLSearchParams();
   formData.append("grant_type", "authorization_code");
