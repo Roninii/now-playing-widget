@@ -2,4 +2,6 @@ This was intended to be an API for fetching user's now playing data from Spotify
 
 ~~For now, I'm scrapping this project. Maybe I'll return later!~~
 
-Seems there is actually a [Spotify Playback SDK](https://developer.spotify.com/documentation/web-playback-sdk) which is probably _exactly_ what I neeed.
+~~Seems there is actually a [Spotify Playback SDK](https://developer.spotify.com/documentation/web-playback-sdk) which is probably _exactly_ what I neeed.~~
+
+Nope -- access is still limited to _your_ spotify account. So I still can't add a widget to my portfolio with what I'm currently listening to without doing some hacky things to keep _my_ token and refresh it.
